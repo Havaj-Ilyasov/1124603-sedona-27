@@ -15,13 +15,13 @@
     <nav class="main-nav">
       <ul class="site-list">
         <li class="site-list__item">
-          <a href="#" class="site-list__link">Информация</a>
+          <a href="" class="site-list__link">Информация</a>
         </li>
         <li class="site-list__item">
-          <a href="#" class="site-list__link">Фото и видео</a>
+          <a href="" class="site-list__link">Фото и видео</a>
         </li>
         <li class="site-list__item">
-          <a href="#" class="site-list__link">Карта штата</a>
+          <a href="" class="site-list__link">Карта штата</a>
         </li>
         <li class="site-list__item">
           <a href="hotels.html" class="site-list__link">Гостиницы</a>
@@ -31,9 +31,115 @@
   </header>
 
   <main>
-    <h1 class="visually-hidden">Список отелей</h1>
+    <h1 class="visually-hidden">Выбор отелей</h1>
+
+    <section class="filter">
+      <h2 class="visually-hidden">Фильтр</h2>
+      <form class="filter__form form" action="">
+        <fieldset class="form__group">
+          <legend class="form__subtitle">Инфраструктура:</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__text">
+                <input class="form__input" type="checkbox" checked>
+                Бассейн
+              </label>
+            </li>
+
+            <li class="form__item">
+              <label class="form__text">
+                <input class="form__input" type="checkbox">
+                Парковка
+              </label>
+            </li>
+
+            <li class="form__item">
+              <label class="form__text">
+                <input class="form__input" type="checkbox">
+                Wi-fi
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__group">
+          <legend class="form__subtitle">Тип жилья:</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__text">
+                <input class="form__input" type="checkbox" checked>
+                Гостиница
+              </label>
+            </li>
+
+            <li class="form__item">
+              <label class="form__text">
+                <input class="form__input" type="checkbox" checked>
+                Мотель
+              </label>
+            </li>
+
+            <li class="form__item">
+              <label class="form__text">
+                <input class="form__input" type="checkbox" checked>
+                Апартаменты
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__group">
+          <legend class="form__subtitle">
+            Стоимость в сутки (р):
+            <div class="form__range range">
+              <div class="range__controls--price">
+                <input class="form__input" type="text" value="от 0">
+                <input class="form__input" type="text" value="от 3000">
+              </div>
+              <div class="range__controls--toggle">
+                <div class="range__scale">
+                  <div class="range__bar"></div>
+                </div>
+                <div class="range__toggle range__toggle--min"></div>
+                <div class="range__toggle range__toggle--max"></div>
+              </div>
+            </div>
+          </legend>
+        </fieldset>
+
+        <button class="form__button" type="submit">Показать</button>
+
+      </form>
+    </section>
+
+    <section class="sort">
+      <h2 class="visually-hidden">Сортировка</h2>
+      <p class="sort__match-text">Найдено: 3</p>
+      <p class="sort__subtitle">Сортировка:</p>
+      <ul class="sort__list">
+        <li class="sort__item">
+          <a class="sort__link" href="">По цене</a>
+        </li>
+        <li class="sort__item">
+          <a class="sort__link" href="">По типу</a>
+        </li>
+        <li class="sort__item">
+          <a class="sort__link" href="">По рейтингу</a>
+        </li>
+      </ul>
+
+      <ul class="sort__list sort__buttons">
+        <li class="sort__item">
+          <a class="sort__button sort__button--up" href=""></a>
+        </li>
+        <li class="sort__item">
+          <a class="sort__button sort__button--down" href=""></a>
+        </li>
+      </ul>
+    </section>
 
     <section class="hotels">
+      <h2 class="visually-hidden">Список отелей</h2>
       <ul class="hotels__list">
         <li class="hotels__item">
           <h2 class="hotels__title">Amara Resort & SPA</h2>
@@ -44,8 +150,8 @@
             от 4000 р.
           </p>
           <img src="https://via.placeholder.com/800x256" width="135" height="90" alt="Гостиница 'Amara Resort & SPA'">
-          <a class="hotels__link read-more-link" href="#">Подробнее</a>
-          <a class="hotels__link hotels__reserv" href="#">Забронировать</a>
+          <a class="hotels__link read-more-link" href="">Подробнее</a>
+          <a class="hotels__link hotels__reserv" href="">Забронировать</a>
           <fieldset class="hotels__rate">
             <legend class="hotels__rate-title">Рейтинг 8.5</legend>
             <input class="hotels__rate-icon" type="radio" name="hotels-quality">1
@@ -64,8 +170,8 @@
             от 3000 р.
           </p>
           <img src="https://via.placeholder.com/800x256" width="135" height="90" alt="Мотель 'Desert Quail Inn'">
-          <a class="hotels__link read-more-link" href="#">Подробнее</a>
-          <a class="hotels__link hotels__reserv" href="#">Забронировать</a>
+          <a class="hotels__link read-more-link" href="">Подробнее</a>
+          <a class="hotels__link hotels__reserv" href="">Забронировать</a>
           <fieldset class="hotels__rate">
             <legend class="hotels__rate-title">Рейтинг 8.9</legend>
             <input class="hotels__rate-icon" type="radio" name="hotels-quality">1
@@ -82,9 +188,10 @@
           <p class="hotels__price">
             от 2000 р.
           </p>
-          <img src="https://via.placeholder.com/800x256" width="135" height="90" alt="Апартаменты 'Villas At Poco Diablo'">
-          <a class="hotels__link read-more-link" href="#">Подробнее</a>
-          <a class="hotels__link hotels__reserv" href="#">Забронировать</a>
+          <img src="https://via.placeholder.com/800x256" width="135" height="90"
+            alt="Апартаменты 'Villas At Poco Diablo'">
+          <a class="hotels__link read-more-link" href="">Подробнее</a>
+          <a class="hotels__link hotels__reserv" href="">Забронировать</a>
           <fieldset class="hotels__rate">
             <legend class="hotels__rate-title">Рейтинг 9.2</legend>
             <input class="hotels__rate-icon" type="radio" name="hotels-quality">1
