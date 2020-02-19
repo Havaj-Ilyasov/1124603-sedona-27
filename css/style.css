@@ -1,0 +1,411 @@
+@font-face {
+  font-family: "Pt Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pt Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Pt Sans", "Tahoma", sans-serif;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* header */
+
+.header {
+  font-size: 14px;
+
+  background-color: #ffffff;
+}
+
+.site-list {
+  list-style: none;
+}
+
+.site-list__link--current {
+  color: #766357;
+}
+
+.site-list__link:hover,
+.site-list__link:focus {
+  color: #81b3d2;
+}
+
+.site-list__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* intro */
+
+.intro {
+  background-color: #87D3E6;
+  background-image: url("../img/bg-intro.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* features */
+
+.features {
+  background-color: #ffffff;
+}
+
+.features__title {
+  font-size: 21px;
+}
+
+.features__subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+}
+
+/* search */
+
+.search {
+  background-color: #ffffff;
+}
+
+.search__title {
+  line-height: 36px;
+  font-size: 30px;
+}
+
+.search__subtitle {
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+}
+
+.search__button {
+  font-size: 21px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #766357;
+  border: none;
+}
+
+.search__button:hover,
+.search__button:focus {
+  background-color: #604e43;
+}
+
+.search__button:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
+
+.search__list {
+  list-style: none;
+}
+
+.search__form {
+  font-size: 14px;
+}
+
+.search__input {
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.search__input:hover {
+  background-color: #ebebeb;
+}
+
+.search__input:focus {
+  background-color: transparent;
+  outline: 2px solid #e5e5e5;
+}
+
+.search__input-btn {
+  position: relative;
+
+  border: none;
+}
+
+.search__input-btn:hover::before,
+.search__input-btn:focus::before,
+.search__input-btn:hover::after,
+.search__input-btn:focus::after {
+  background-color: #000000;
+}
+
+.search__input-btn:active::before,
+.search__input-btn:active::after {
+  background-color: #81b3d2;
+}
+
+.search__input-btn--remove::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 12px;
+  height: 3px;
+
+  background-color: #a9a9a9;
+
+  transform: translate(-50%, -50%);
+}
+
+.search__input-btn--add::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 12px;
+  height: 3px;
+
+  background-color: #a9a9a9;
+
+  transform: translate(-50%, -50%);
+}
+
+.search__input-btn--add::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 3px;
+  height: 12px;
+
+  background-color: #a9a9a9;
+
+  transform: translate(-50%, -50%);
+}
+
+.search__calendar {
+  background-color: transparent;
+  border: none;
+}
+
+.search__icon--calendar {
+  fill: #cacaca;
+}
+
+.search__calendar:hover .search__icon--calendar,
+.search__calendar:focus .search__icon--calendar {
+  fill: #000000;
+}
+
+.search__calendar:active .search__icon--calendar {
+  fill: #81b3d2;
+}
+
+.search__form-btn {
+  font-size: 21px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #81b3d2;
+  border: none;
+}
+
+.search__form-btn:hover,
+.search__form-btn:focus {
+  background-color: #669ec0;
+}
+
+.search__form-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}
+
+/* footer */
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.footer__hashtag,
+.footer__tel {
+  font-size: 21px;
+  color: #000000;
+}
+
+.social {
+  list-style: none;
+}
+
+.social__link {
+  background-color: #81b3d2;
+}
+
+.social__link:hover,
+.social__link:focus {
+  background-color: #669ec0;
+}
+
+.social__link:active .social__icon {
+  opacity: 0.3;
+}
+
+.social__link:active {
+  background-color: #5496bd;
+}
+
+.develop__text {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.develop__logo {
+  width: 100px;
+  height: 100px;
+}
+
+.develop__logo:hover .develop__icon,
+.develop__logo:focus .develop__icon {
+  fill: #81b3d2;
+}
+
+.develop__logo:active .develop__icon {
+  fill: #bdbbbc;
+}
+
+
+/* hotels.html */
+
+/* hotels */
+
+.hotels {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+
+  background-color: #ffffff;
+}
+
+.hotels__list {
+  list-style: none;
+}
+
+.hotels__title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.hotels__title:hover,
+.hotels__title:focus {
+  color: #81b3d2;
+}
+
+.hotels__title:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.hotels__subtitle {
+  font-weight: 400;
+  color: #333333;
+}
+
+.hotels__price {
+  color: #333333;
+}
+
+.read-more-link {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.read-more-link:hover,
+.read-more-link:focus {
+  background-color: #669ec0;
+}
+
+.read-more-link:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}
+
+.hotels__reserv {
+  color: #ffffff;
+
+  background-color: #766357;
+}
+
+.hotels__reserv:hover,
+.hotels__reserv:focus {
+  background-color: #604e43;
+}
+
+.hotels__reserv:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
