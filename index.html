@@ -10,9 +10,9 @@
 
   <header class="header">
     <a class="header__logo">
-      <img src="img/logo-sedona.img" width="140" height="71" alt="Логотип Седоны">
+      <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип Седоны">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Главное меню">
       <ul class="site-list">
         <li class="site-list__item">
           <a href="" class="site-list__link">Информация</a>
@@ -89,28 +89,36 @@
       </ol>
     </section>
 
-    <section class="search-form">
+    <section class="search">
       <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-      <b class="search-form__title">Заинтересовались?</b>
-      <p class="search-form__subtitle">Укажите предпологаемые даты поездки, и мы покажем вам лучшие предложения гостиниц
+      <b class="search__title">Заинтересовались?</b>
+      <p class="search__subtitle">Укажите предпологаемые даты поездки, и мы покажем вам лучшие предложения гостиниц
         в Седоне</p>
-      <button class="search-form__button" type="button">Поиск гостиницы в Седоне</button>
-      <form class="form">
-        <label class="form__subtitle">Дата заезда:</label>
-        <input class="form__input" type="text" placeholder="24 апреля 2017">
-        <span class="form__icon"></span>
+      <button class="search__button" type="button">Поиск гостиницы в Седоне</button>
+      <form class="search__form" action="https://echo.htmlacademy.ru" method="POST">
+        <p>
+          <label class="search__form-subtitle" for="form__check-in">Дата заезда:</label>
+          <input class="search__form-input" id="form__check-in" type="text" placeholder="24 апреля 2017">
+          <span class="search__form-icon"></span>
+        </p>
 
-        <label class="form__subtitle">Дата выезда:</label>
-        <input class="form__input" type="text" placeholder="4 июля 2017">
-        <span class="form__icon"></span>
+        <p>
+          <label class="search__form-subtitle" for="form__check-out">Дата выезда:</label>
+          <input class="search__form-input" id="form__check-out" type="text" placeholder="4 июля 2017">
+          <span class="search__form-icon"></span>
+        </p>
 
-        <label class="form__subtitle">Взрослые:</label>
-        <input class="form__input" type="text" placeholder="2">
+        <p>
+          <label class="search__form-subtitle" for="form__age-adults">Взрослые:</label>
+          <input class="search__form-input" id="form__age-adults" type="text" placeholder="2">
+        </p>
 
-        <label class="form__subtitle">Дети:</label>
-        <input class="form__input" type="text" placeholder="0">
+        <p>
+          <label class="search__form-subtitle" for="form__age-children">Дети:</label>
+          <input class="search__form-input" id="form__age-children" type="text" placeholder="0">
+        </p>
 
-        <button class="form__button" type="submit">Найти</button>
+        <button class="search__form-button" type="submit">Найти</button>
       </form>
     </section>
 
@@ -167,7 +175,6 @@
       </svg>
     </a>
   </footer>
-
 
 </body>
 

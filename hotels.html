@@ -12,7 +12,7 @@
     <a class="header__logo">
       <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип Седоны">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Главное меню">
       <ul class="site-list">
         <li class="site-list__item">
           <a href="" class="site-list__link">Информация</a>
@@ -35,7 +35,7 @@
 
     <section class="filter">
       <h2 class="visually-hidden">Фильтр</h2>
-      <form class="filter__form form" action="">
+      <form class="filter__form form" action="https://echo.htmlacademy.ru" method="POST">
         <fieldset class="form__group">
           <legend class="form__subtitle">Инфраструктура:</legend>
           <ul class="form__list">
@@ -131,11 +131,13 @@
       <ul class="sort__list sort__buttons">
         <li class="sort__item">
           <a class="sort__button sort__button--up" href="">
+            <span class="visually-hidden">Кнопка сортировки отелей по возрастанию</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
           </a>
         </li>
         <li class="sort__item">
           <a class="sort__button sort__button--down" href="">
+            <span class="visually-hidden">Кнопка сортировки отелей по убыванию</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
           </a>
         </li>
