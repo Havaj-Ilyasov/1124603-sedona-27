@@ -115,6 +115,48 @@ input[type="radio"].visually-hidden {
   color: #333333;
 }
 
+.features__list {
+  line-height: 21px;
+
+  list-style: none;
+}
+
+.features__item:nth-child(1),
+.features__item:nth-child(2) {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.features__slogan {
+  font-size: 21px;
+}
+
+.features__index {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.features__desc {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.features__sublist {
+  list-style: none;
+
+  color: #000000;
+}
+
+.features__sublist-title {
+  font-size: 21px;
+}
+
+.features__sublist-desc {
+  font-size: 14px;
+  font-weight: 400;
+}
+
 /* search */
 
 .search {
@@ -337,6 +379,106 @@ input[type="radio"].visually-hidden {
 
 
 /* hotels.html */
+
+/* filter */
+
+.filter {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #ffffff;
+
+  background-color: #87D3E6;
+  background-image: url("../img/bg-filter.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.form__group {
+  border: none;
+}
+
+.form__subtitle {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.form__list {
+  list-style: none;
+}
+
+.form__button {
+  line-height: 21px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+.form__button:hover,
+.form__button:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+/* sort */
+
+.sort {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.sort__match-text {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.sort__list {
+  list-style: none;
+}
+
+.sort__item:not(:nth-child(1)) .sort__link {
+  color: rgba(0, 0, 0, 0.3);
+
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sort__item:not(:nth-child(1)) .sort__link:hover,
+.sort__item:not(:nth-child(1)) .sort__link:focus {
+  color: #81b3d2;
+}
+
+.sort__item:not(:nth-child(1)) .sort__link:active {
+  color: #000000;
+
+  border-color: transparent;
+}
+
+.sort__link {
+  color: #000000;
+}
+
+.sort__link--current {
+  color: #81b3d2;
+}
+
+.sort__icon {
+  fill: #cacaca;
+}
+
+.sort__button:hover .sort__icon,
+.sort__button:focus .sort__icon {
+  fill: #000000;
+}
+
+.sort__button:active .sort__icon {
+  fill: #81b3d2;
+}
 
 /* hotels */
 
