@@ -68,20 +68,44 @@ input[type="radio"].visually-hidden {
 
 .header {
   font-size: 14px;
+}
+
+.header .container {
+  position: relative;
+
+  width: 1200px;
+  margin: 0 auto;
+  min-height: 56px;
 
   background-color: #ffffff;
 }
 
+.header__logo {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
 .site-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.site-list__link {
+  color: #000000;
 }
 
 .site-list__link--current {
   color: #766357;
 }
 
-.site-list__link:hover,
-.site-list__link:focus {
+.site-list__item:not(:nth-child(1)) .site-list__link:hover,
+.site-list__item:not(:nth-child(1)) .site-list__link:focus {
   color: #81b3d2;
 }
 
@@ -92,10 +116,21 @@ input[type="radio"].visually-hidden {
 /* intro */
 
 .intro {
+  min-height: 510px;
+}
+
+.intro .container {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 75px;
+  padding-bottom: 80px;
+
   background-color: #87D3E6;
   background-image: url("../img/bg-intro.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center -85px;
   background-size: cover;
 }
 
@@ -158,8 +193,14 @@ input[type="radio"].visually-hidden {
 }
 
 /* search */
+.search .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 55px;
 
-.search {
   background-color: #ffffff;
 }
 
@@ -169,6 +210,8 @@ input[type="radio"].visually-hidden {
 }
 
 .search__subtitle {
+  margin: 0;
+
   line-height: 24px;
   font-weight: 400;
   font-size: 14px;
@@ -176,6 +219,9 @@ input[type="radio"].visually-hidden {
 }
 
 .search__button {
+  width: 568px;
+  min-height: 86px;
+
   font-size: 21px;
   font-weight: 700;
   color: #ffffff;
@@ -183,6 +229,8 @@ input[type="radio"].visually-hidden {
 
   background-color: #766357;
   border: none;
+
+  cursor: pointer;
 }
 
 .search__button:hover,
@@ -197,11 +245,21 @@ input[type="radio"].visually-hidden {
 }
 
 .search__list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .search__form {
+  display: none;
+  width: 568px;
+  min-height: 395px;
+  padding: 55px;
+
   font-size: 14px;
+
+  outline: 1px solid grey;
 }
 
 .search__input {
@@ -327,8 +385,24 @@ input[type="radio"].visually-hidden {
 
 /* footer */
 
-.footer {
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 35px;
+  padding-right: 100px;
+  padding-left: 132px;
+  padding-bottom: 35px;
+
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 .footer__hashtag,
@@ -338,6 +412,13 @@ input[type="radio"].visually-hidden {
 }
 
 .social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 150px;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -358,14 +439,15 @@ input[type="radio"].visually-hidden {
   background-color: #5496bd;
 }
 
+.develop {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
 .develop__text {
   font-size: 14px;
   font-weight: 400;
-}
-
-.develop__logo {
-  width: 100px;
-  height: 100px;
 }
 
 .develop__logo:hover .develop__icon,
@@ -486,15 +568,34 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
+}
+
+.hotels .container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-right: 70px;
+  padding-left: 70px;
 
   background-color: #ffffff;
 }
 
 .hotels__list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
+.hotels__item {
+  height: 155px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .hotels__title {
+  margin: 0;
+  padding: 0;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -510,11 +611,16 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels__subtitle {
+  margin: 0;
+  padding: 0;
+
   font-weight: 400;
   color: #333333;
 }
 
 .hotels__price {
+  padding: 0;
+
   color: #333333;
 }
 
@@ -550,4 +656,8 @@ input[type="radio"].visually-hidden {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #503e33;
+}
+
+.hotels__rate {
+  border: none;
 }
