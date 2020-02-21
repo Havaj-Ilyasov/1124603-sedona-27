@@ -136,34 +136,76 @@ input[type="radio"].visually-hidden {
 
 /* features */
 
-.features {
+.features .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 65px;
+
   background-color: #ffffff;
 }
 
 .features__title {
+  width: 440px;
+
   font-size: 21px;
 }
 
 .features__subtitle {
+  margin: 0;
+
   font-size: 14px;
   font-weight: 400;
   color: #333333;
 }
 
 .features__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
   line-height: 21px;
 
   list-style: none;
 }
 
+.features__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+
+.features__item:not(:nth-child(1)) {
+  height: 256px;
+}
+
 .features__item:nth-child(1),
 .features__item:nth-child(2) {
+  width: 100%;
+
   color: #ffffff;
 
   background-color: #81b3d2;
 }
 
+.features__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+
 .features__slogan {
+  margin: 0;
+
   font-size: 21px;
 }
 
@@ -173,21 +215,48 @@ input[type="radio"].visually-hidden {
 }
 
 .features__desc {
+  margin: 0;
+
   font-size: 14px;
   font-weight: 400;
 }
 
+.features__img-wrapper {
+  margin: 0;
+
+  line-height: 0;
+}
+
 .features__sublist {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 
   color: #000000;
+
+  background-color: #ffffff;
+}
+
+.features__sublist-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 330px;
 }
 
 .features__sublist-title {
+  margin: 0;
+
   font-size: 21px;
 }
 
 .features__sublist-desc {
+  margin: 0;
+
   font-size: 14px;
   font-weight: 400;
 }
@@ -383,6 +452,13 @@ input[type="radio"].visually-hidden {
   background-color: #5496bd;
 }
 
+/* map */
+
+.map .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* footer */
 
 .footer .container {
@@ -469,6 +545,15 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
   line-height: 21px;
   color: #ffffff;
+}
+
+.filter .container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-bottom: 35px;
 
   background-color: #87D3E6;
   background-image: url("../img/bg-filter.png");
@@ -477,8 +562,24 @@ input[type="radio"].visually-hidden {
   background-size: cover;
 }
 
+.form {
+  display: flex;
+}
+
 .form__group {
+  min-height: 160px;
+  margin: 0;
+  padding: 0;
+
   border: none;
+}
+
+.form__group:nth-child(1) {
+  margin-right: 115px;
+}
+
+.form__group:nth-child(3) {
+  margin-left: auto;
 }
 
 .form__subtitle {
@@ -487,6 +588,9 @@ input[type="radio"].visually-hidden {
 }
 
 .form__list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -514,13 +618,37 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
 }
 
+.sort .container {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-bottom: 30px;
+
+  background-color: #ffffff;
+}
+
 .sort__match-text {
+  margin: 0;
+  margin-right: 50px;
+
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
 }
 
+.sort__subtitle {
+  margin: 0;
+}
+
 .sort__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -547,6 +675,10 @@ input[type="radio"].visually-hidden {
 
 .sort__link--current {
   color: #81b3d2;
+}
+
+.sort__buttons {
+  margin-left: auto;
 }
 
 .sort__icon {
@@ -587,8 +719,13 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels__item {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
   height: 155px;
   padding-top: 30px;
+  padding-left: 165px;
   padding-bottom: 30px;
 }
 
@@ -610,6 +747,16 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.hotels__img-wrap {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  margin: 0;
+
+  transform: translateY(-50%);
+}
+
 .hotels__subtitle {
   margin: 0;
   padding: 0;
@@ -619,7 +766,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels__price {
-  padding: 0;
+  margin: 0;
 
   color: #333333;
 }
@@ -659,5 +806,24 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels__rate {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   border: none;
+}
+
+.hotels__rate-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hotels__rate-group {
+  margin: 0;
+}
+
+.hotels__rate-title {
+  order: 2;
+  margin: 0;
 }
