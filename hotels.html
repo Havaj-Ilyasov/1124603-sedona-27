@@ -12,7 +12,7 @@
 
   <header class="header">
     <div class="container">
-        <a class="header__logo">
+        <a class="header__logo" href="index.html">
           <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип Седоны">
         </a>
         <nav class="main-nav" aria-label="Главное меню">
@@ -156,16 +156,20 @@
         <ul class="hotels__list">
           <li class="hotels__item">
             <div class="hotels__col">
-              <h2 class="hotels__title">Amara Resort & SPA</h2>
+              <h2 class="hotels__title">
+                <a class="hotels__title-link" href="">Amara Resort & SPA</a>
+              </h2>
               <p class="hotels__img-wrap">
                 <img class="hotels__img" src="img/hotels-picture-1.jpg" width="135" height="90" alt="Гостиница 'Amara Resort & SPA'">
               </p>
-              <h3 class="hotels__subtitle">
-                Гостиница
-              </h3>
-              <p class="hotels__price">
-                от 4000 р.
-              </p>
+            <div class="hotels__type">
+                <h3 class="hotels__subtitle">
+                  Гостиница
+                </h3>
+                <span class="hotels__price">
+                  от 4000 р.
+                </span>
+            </div>
               <a class="hotels__link read-more-link" href="">Подробнее</a>
               <a class="hotels__link hotels__reserv" href="">Забронировать</a>
             </div>
@@ -173,41 +177,20 @@
               <fieldset class="hotels__rate">
                 <div class="hotels__rate-content">
                   <legend class="hotels__rate-title">Рейтинг 8.5</legend>
-                  <p class="hotels__rate-group">
-                    <input class="hotels__rate-icon" type="radio" name="hotels-quality">
-                    <input class="hotels__rate-icon" type="radio" name="hotels-quality">
-                    <input class="hotels__rate-icon" type="radio" name="hotels-quality">
-                    <input class="hotels__rate-icon" type="radio" name="hotels-quality">
-                  </p>
-                </idv>
-              </fieldset>
-            </div>
-          </li>
-
-          <li class="hotels__item">
-            <div class="hotels__col">
-              <h2 class="hotels__title">Desert Quail Inn</h2>
-              <p class="hotels__img-wrap">
-                <img class="hotels__img" src="img/hotels-picture-2.jpg" width="135" height="90" alt="Мотель 'Desert Quail Inn'">
-              </p>
-              <h3 class="hotels__subtitle">
-                Мотель
-              </h3>
-              <p class="hotels__price">
-                от 3000 р.
-              </p>
-              <a class="hotels__link read-more-link" href="">Подробнее</a>
-              <a class="hotels__link hotels__reserv" href="">Забронировать</a>
-            </div>
-            <div class="hotels__col">
-              <fieldset class="hotels__rate">
-                <div class="hotels__rate-content">
-                  <legend class="hotels__rate-title">Рейтинг 8.9</legend>
-                  <p class="hotels__rate-group">
-                    <input class="hotels__rate-icon" type="radio" name="hotels-quality">
-                    <input class="hotels__rate-icon" type="radio" name="hotels-quality">
-                    <input class="hotels__rate-icon" type="radio" name="hotels-quality">
-                  </p>
+                  <ul class="hotels__rate-list">
+                    <li class="hotels__rate-item">
+                      <label class="hotels__rate-label"><input class="hotels__rate-input visually-hidden" type="radio" name="hotels-quality"></label>
+                    </li>
+                    <li class="hotels__rate-item">
+                      <label class="hotels__rate-label"><input class="hotels__rate-input visually-hidden" type="radio" name="hotels-quality"></label>
+                    </li>
+                    <li class="hotels__rate-item">
+                      <label class="hotels__rate-label"><input class="hotels__rate-input visually-hidden" type="radio" name="hotels-quality"></label>
+                    </li>
+                    <li class="hotels__rate-item">
+                      <label class="hotels__rate-label"><input class="hotels__rate-input visually-hidden" type="radio" name="hotels-quality"></label>
+                    </li>
+                  </ul>
                 </div>
               </fieldset>
             </div>
@@ -215,16 +198,59 @@
 
           <li class="hotels__item">
             <div class="hotels__col">
-              <h2 class="hotels__title">Villas At Poco Diablo</h2>
+              <h2 class="hotels__title">
+                <a class="hotels__title-link" href="">Desert Quail Inn</a>
+              </h2>
+              <p class="hotels__img-wrap">
+                <img class="hotels__img" src="img/hotels-picture-2.jpg" width="135" height="90" alt="Мотель 'Desert Quail Inn'">
+              </p>
+              <div class="hotels__type">
+                <h3 class="hotels__subtitle">
+                  Мотель
+                </h3>
+                <span class="hotels__price">
+                  от 3000 р.
+                </span>
+              </div>
+              <a class="hotels__link read-more-link" href="">Подробнее</a>
+              <a class="hotels__link hotels__reserv" href="">Забронировать</a>
+            </div>
+            <div class="hotels__col">
+              <fieldset class="hotels__rate">
+                <div class="hotels__rate-content">
+                  <legend class="hotels__rate-title">Рейтинг 8.9</legend>
+                  <ul class="hotels__rate-list">
+                    <li class="hotels__rate-item">
+                      <label class="hotels__rate-label"><input class="hotels__rate-input visually-hidden" type="radio" name="hotels-quality"></label>
+                    </li>
+                    <li class="hotels__rate-item">
+                      <label class="hotels__rate-label"><input class="hotels__rate-input visually-hidden" type="radio" name="hotels-quality"></label>
+                    </li>
+                    <li class="hotels__rate-item">
+                      <label class="hotels__rate-label"><input class="hotels__rate-input visually-hidden" type="radio" name="hotels-quality"></label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+            </div>
+          </li>
+
+          <li class="hotels__item">
+            <div class="hotels__col">
+              <h2 class="hotels__title">
+                <a class="hotels__title-link" href="">Villas At Poco Diablo</a>
+              </h2>
               <p class="hotels__img-wrap">
                 <img class="hotels__img" src="img/hotels-picture-3.jpg" width="135" height="90" alt="Апартаменты 'Villas At Poco Diablo'">
               </p>
-              <h3 class="hotels__subtitle">
-                Апартаменты
-              </h3>
-              <p class="hotels__price">
-                от 2000 р.
-              </p>
+              <div class="hotels__type">
+                <h3 class="hotels__subtitle">
+                  Апартаменты
+                </h3>
+                <span class="hotels__price">
+                  от 2000 р.
+                </span>
+              </div>
               <a class="hotels__link read-more-link" href="">Подробнее</a>
               <a class="hotels__link hotels__reserv" href="">Забронировать</a>
             </div>
@@ -232,10 +258,14 @@
               <fieldset class="hotels__rate">
                 <div class="hotels__rate-content">
                   <legend class="hotels__rate-title">Рейтинг 9.2</legend>
-                  <p class="hotels__rate-group">
-                    <input class="hotels__rate-icon" type="radio" name="hotels-quality">
-                    <input class="hotels__rate-icon" type="radio" name="hotels-quality">
-                  </p>
+                  <ul class="hotels__rate-list">
+                    <li class="hotels__rate-item">
+                      <label class="hotels__rate-label"><input class="hotels__rate-input visually-hidden" type="radio" name="hotels-quality"></label>
+                    </li>
+                    <li class="hotels__rate-item">
+                      <label class="hotels__rate-label"><input class="hotels__rate-input visually-hidden" type="radio" name="hotels-quality"></label>
+                    </li>
+                  </ul>
                 </div>
               </fieldset>
             </div>
