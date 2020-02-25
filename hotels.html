@@ -12,27 +12,27 @@
 
   <header class="header">
     <div class="container">
-        <a class="header__logo" href="index.html">
-          <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип Седоны">
-        </a>
-        <nav class="main-nav" aria-label="Главное меню">
-          <ul class="site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">Информация</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="">Фото и видео</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="">Карта штата</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--current">Гостиницы</a>
-            </li>
-          </ul>
-        </nav>
+      <a class="header__logo" href="index.html">
+        <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип Седоны">
+      </a>
+      <nav class="main-nav" aria-label="Главное меню">
+        <ul class="site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Информация</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="">Карта штата</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--current">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    </header>
+  </header>
 
 
   <main>
@@ -46,20 +46,20 @@
             <legend class="form__subtitle">Инфраструктура:</legend>
             <ul class="form__list">
               <li class="form__item">
-                <label class="form__text">
-                  <input class="form__input" type="checkbox" checked>
+                <input class="form__input visually-hidden" id="form__pool" type="checkbox" name="pool" checked>
+                <label class="form__text" for="form__pool">
                   Бассейн
                 </label>
               </li>
               <li class="form__item">
-                <label class="form__text">
-                  <input class="form__input" type="checkbox">
+                <input class="form__input visually-hidden" id="form__parking" type="checkbox" name="parking">
+                <label class="form__text" for="form__parking">
                   Парковка
                 </label>
               </li>
               <li class="form__item">
-                <label class="form__text">
-                  <input class="form__input" type="checkbox">
+                <input class="form__input visually-hidden" id="form__wifi" type="checkbox" name="wifi">
+                <label class="form__text" for="form__wifi">
                   Wi-fi
                 </label>
               </li>
@@ -70,22 +70,23 @@
             <legend class="form__subtitle">Тип жилья:</legend>
             <ul class="form__list">
               <li class="form__item">
-                <label class="form__text">
-                  <input class="form__input" type="checkbox" checked>
+                <input class="form__input visually-hidden" id="form__hotel" type="checkbox" name="hotel" checked>
+                <label class="form__text" for="form__hotel">
                   Гостиница
                 </label>
               </li>
 
               <li class="form__item">
-                <label class="form__text">
-                  <input class="form__input" type="checkbox" checked>
+                <input class="form__input visually-hidden" id="form__motel" type="checkbox" name="motel" checked>
+                <label class="form__text" for="form__motel">
                   Мотель
                 </label>
               </li>
 
               <li class="form__item">
-                <label class="form__text">
-                  <input class="form__input" type="checkbox" checked>
+                <input class="form__input visually-hidden" id="form__apartments" name="apartments" type="checkbox"
+                  checked>
+                <label class="form__text" for="form__apartments">
                   Апартаменты
                 </label>
               </li>
@@ -93,14 +94,16 @@
           </fieldset>
 
           <fieldset class="form__group">
-            <legend class="form__subtitle">
-              Стоимость в сутки (р):
+            <div class="form__group-content">
+              <legend class="form__subtitle">
+                Стоимость в сутки (р):
+              </legend>
               <div class="form__range range">
-                <div class="range__controls--price">
-                  <input class="form__input" type="text" value="от 0">
-                  <input class="form__input" type="text" value="от 3000">
+                <div class="range__controls range__controls--price">
+                  <input class="form__input form__input--price" type="text" placeholder="от 0">
+                  <input class="form__input form__input--price" type="text" placeholder="от 3000">
                 </div>
-                <div class="range__controls--toggle">
+                <div class="range__controls range__controls--toggle">
                   <div class="range__scale">
                     <div class="range__bar"></div>
                   </div>
@@ -108,8 +111,8 @@
                   <div class="range__toggle range__toggle--max"></div>
                 </div>
               </div>
-          <button class="form__button" type="submit">Показать</button>
-            </legend>
+              <button class="form__button" type="submit">Показать</button>
+            </div>
           </fieldset>
 
         </form>
@@ -133,7 +136,7 @@
           </li>
         </ul>
 
-        <ul class="sort__list sort__buttons">
+        <ul class="sort__buttons">
           <li class="sort__item">
             <a class="sort__button sort__button--up" href="">
               <span class="visually-hidden">Кнопка сортировки отелей по возрастанию</span>
@@ -141,7 +144,7 @@
             </a>
           </li>
           <li class="sort__item">
-            <a class="sort__button sort__button--down" href="">
+            <a class="sort__button sort__button--down sort__button--current">
               <span class="visually-hidden">Кнопка сортировки отелей по убыванию</span>
               <svg class="sort__icon" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 10L0 0h11"/></svg>
             </a>
@@ -326,7 +329,7 @@
           </a>
         </p>
     </div>
-    </footer>
+  </footer>
 
 </body>
 
