@@ -18,16 +18,16 @@
       <nav class="main-nav" aria-label="Главное меню">
         <ul class="site-list">
           <li class="site-list__item">
-            <a class="site-list__link site-list__link--current">Информация</a>
+            <a class="site-list__link" href="">Информация</a>
           </li>
           <li class="site-list__item">
-            <a href="" class="site-list__link">Фото и видео</a>
+            <a class="site-list__link" href="">Фото и видео</a>
           </li>
           <li class="site-list__item">
-            <a href="" class="site-list__link">Карта штата</a>
+            <a class="site-list__link" href="">Карта штата</a>
           </li>
           <li class="site-list__item">
-            <a href="hotels.html" class="site-list__link">Гостиницы</a>
+            <a class="site-list__link" href="hotels.html">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -169,10 +169,10 @@
                 <label class="search__label" for="form__age-children">Дети:</label>
                 <span class="search__input-wrapper">
                   <button class="search__input-btn search__input-btn--remove" type="button"
-                    aria-label="Уменьшить количество взрослых"></button>
+                    aria-label="Уменьшить количество детей"></button>
                   <input class="search__input" id="form__age-children" type="text" placeholder="0">
                   <button class="search__input-btn search__input-btn--add" type="button"
-                    aria-label="Увеличить количество взрослых"></button>
+                    aria-label="Увеличить количество детей"></button>
                 </span>
               </p>
             </li>
@@ -183,9 +183,9 @@
     </section>
 
     <section class="map">
-      <div class="container">
+      <div class="container" id="map">
         <h2 class="visually-hidden">Расположение Седоны на карте</h2>
-        <img src="img/map.png" width="1200" height="476" alt="Седона на карте">
+        <img class="map__img" src="img/map.png" width="1200" height="476" alt="Седона на карте">
       </div>
     </section>
 
@@ -243,6 +243,11 @@
       </p>
     </div>
   </footer>
+
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=2c21ee93-fded-406a-adad-0c03e0889bd8&lang=ru_RU"
+    type="text/javascript">
+    </script>
+  <script src="js/script.js"></script> -->
 
 </body>
 
