@@ -66,3 +66,27 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+// Map
+
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+          center: [34.869497, -111.760186],
+          zoom: 14,
+          controls: ['zoomControl']
+      }, {
+          searchControlProvider: 'yandex#search'
+      }),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          iconLayout: 'default#image'
+      });
+
+
+      myMap.behaviors.disable('scrollZoom');
+  myMap.geoObjects
+      .add(myPlacemark);
+});
+
+
+

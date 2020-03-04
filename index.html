@@ -8,7 +8,7 @@
   <title>HTML Academy: Седона</title>
 </head>
 
-<body>
+<body class="index-page">
 
   <div class="main-container main-container--shadow">
     <header class="header">
@@ -189,13 +189,10 @@
       </section>
 
       <section class="map">
-        <div class="map__container">
+        <div class="map__container" id="map">
           <h2 class="visually-hidden">Как до нас добраться?</h2>
-          <iframe class="map__google"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11011.720431886133!2d-111.76481410814134!3d34.86115009698503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da3e29dee3051%3A0x1db4df328b114b5f!2zMjM1IE4gU3RhdGUgUnRlIDg5QSwgU2Vkb25hLCBBWiA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1582724984413!5m2!1sru!2sru"
-            width="1200" height="476" allowfullscreen=""></iframe>
           <p class="map__img-wrapper">
-            <img class="map__img" src="img/map.png" width="1200" height="476" alt="Седона на карте">
+            <img class="map__img" src="img/map.png" width="1200" height="476" alt="город Седона, штат Аризона, США">
           </p>
         </div>
       </section>
@@ -254,8 +251,11 @@
         </p>
       </div>
     </footer>
+
   </div>
 
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=2c21ee93-fded-406a-adad-0c03e0889bd8&lang=ru_RU">
+    </script>
   <script src="js/index.js"></script>
 
 </body>

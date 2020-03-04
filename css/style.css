@@ -65,6 +65,8 @@ input[type="radio"].visually-hidden {
 }
 
 .main-container {
+  position: relative;
+
   width: 1200px;
   margin: 0 auto;
 }
@@ -795,28 +797,28 @@ input[type="radio"].visually-hidden {
 /* map */
 
 .map__container {
-  position: relative;
-
-  height: 475px;
-}
-
-.map__google {
-  border: none;
+  height: 593px;
 }
 
 .map__img-wrapper {
   position: absolute;
-  top: 0;
+  /* top: 0; */
   z-index: -1;
 
   margin: 0;
 }
 
-.map__img {
-  height: 475px;
-}
-
 /* footer */
+
+.index-page .footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+
+  width: 1200px;
+
+  opacity: 0.9;
+}
 
 .footer__container {
   display: flex;
