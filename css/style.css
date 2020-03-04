@@ -107,8 +107,11 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
+  padding-left: 72px;
+  padding-right: 72px;
 
   list-style: none;
 }
@@ -121,9 +124,18 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.site-list__item:nth-child(2) {
-  margin-right: 244px;
-}
+.site-list__item:nth-child(4n){
+  text-align: right;
+  }
+  .site-list__item:nth-child(4n-1){
+  text-align: right;
+  }
+  .site-list__item:nth-child(4n-2){
+  text-align: left;
+  }
+  .site-list__item:nth-child(4n-3){
+  text-align: left;
+  }
 
 .site-list__link {
   color: #000000;
